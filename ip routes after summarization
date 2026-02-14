@@ -1,0 +1,175 @@
+R1> en 
+R1# show ip route 
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     10.0.0.0/8 is variably subnetted, 6 subnets, 3 masks
+C       10.0.0.0/30 is directly connected, GigabitEthernet0/0
+L       10.0.0.1/32 is directly connected, GigabitEthernet0/0
+C       10.0.0.4/30 is directly connected, GigabitEthernet0/1
+L       10.0.0.5/32 is directly connected, GigabitEthernet0/1
+S       10.1.0.0/23 [1/0] via 10.0.0.2
+S       10.2.0.0/23 [1/0] via 10.0.0.6
+     172.16.0.0/23 is subnetted, 1 subnets
+S       172.16.0.0/23 [1/0] via 10.0.0.2
+                      [1/0] via 10.0.0.6
+     203.0.113.0/24 is variably subnetted, 2 subnets, 2 masks
+C       203.0.113.0/30 is directly connected, GigabitEthernet0/2
+L       203.0.113.2/32 is directly connected, GigabitEthernet0/2
+
+R2> en 
+R2# show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     10.0.0.0/8 is variably subnetted, 6 subnets, 4 masks
+C       10.0.0.0/30 is directly connected, GigabitEthernet0/2
+L       10.0.0.2/32 is directly connected, GigabitEthernet0/2
+S       10.0.0.4/30 [1/0] via 10.0.0.1
+S       10.1.1.0/24 [1/0] via 172.16.10.2
+S       10.1.2.0/24 [1/0] via 172.16.11.2
+S       10.2.0.0/23 [1/0] via 10.0.0.1
+     172.16.0.0/16 is variably subnetted, 5 subnets, 3 masks
+S       172.16.0.0/23 [1/0] via 10.0.0.1
+C       172.16.10.0/24 is directly connected, GigabitEthernet0/0
+L       172.16.10.1/32 is directly connected, GigabitEthernet0/0
+C       172.16.11.0/24 is directly connected, GigabitEthernet0/1
+L       172.16.11.1/32 is directly connected, GigabitEthernet0/1
+
+
+R3> en 
+R3# show ip route 
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     10.0.0.0/8 is variably subnetted, 6 subnets, 4 masks
+S       10.0.0.0/30 [1/0] via 10.0.0.5
+C       10.0.0.4/30 is directly connected, GigabitEthernet0/2
+L       10.0.0.6/32 is directly connected, GigabitEthernet0/2
+S       10.1.0.0/23 [1/0] via 10.0.0.5
+S       10.2.1.0/24 [1/0] via 172.16.20.2
+S       10.2.2.0/24 [1/0] via 172.16.21.2
+     172.16.0.0/16 is variably subnetted, 5 subnets, 3 masks
+S       172.16.0.0/23 [1/0] via 10.0.0.5
+C       172.16.20.0/24 is directly connected, GigabitEthernet0/0
+L       172.16.20.1/32 is directly connected, GigabitEthernet0/0
+C       172.16.21.0/24 is directly connected, GigabitEthernet0/1
+L       172.16.21.1/32 is directly connected, GigabitEthernet0/1
+
+R4> en
+R4# show ip route 
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     10.0.0.0/8 is variably subnetted, 5 subnets, 4 masks
+S       10.0.0.0/29 [1/0] via 172.16.11.1
+S       10.1.1.0/24 [1/0] via 172.16.11.1
+C       10.1.2.0/24 is directly connected, GigabitEthernet0/0
+L       10.1.2.1/32 is directly connected, GigabitEthernet0/0
+S       10.2.0.0/23 [1/0] via 172.16.11.1
+     172.16.0.0/16 is variably subnetted, 4 subnets, 3 masks
+S       172.16.0.0/23 [1/0] via 172.16.11.1
+S       172.16.10.0/24 [1/0] via 172.16.11.1
+C       172.16.11.0/24 is directly connected, GigabitEthernet0/1
+L       172.16.11.2/32 is directly connected, GigabitEthernet0/1
+
+R5> en 
+R5# show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     10.0.0.0/8 is variably subnetted, 5 subnets, 4 masks
+S       10.0.0.0/29 [1/0] via 172.16.10.1
+C       10.1.1.0/24 is directly connected, GigabitEthernet0/0
+L       10.1.1.1/32 is directly connected, GigabitEthernet0/0
+S       10.1.2.0/24 [1/0] via 172.16.10.1
+S       10.2.0.0/23 [1/0] via 172.16.10.1
+     172.16.0.0/16 is variably subnetted, 4 subnets, 3 masks
+S       172.16.0.0/23 [1/0] via 172.16.10.1
+C       172.16.10.0/24 is directly connected, GigabitEthernet0/1
+L       172.16.10.2/32 is directly connected, GigabitEthernet0/1
+S       172.16.11.0/24 [1/0] via 172.16.10.1
+
+
+R6(config)# do show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     10.0.0.0/8 is variably subnetted, 6 subnets, 4 masks
+S       10.0.0.0/24 [1/0] via 172.16.21.1
+S       10.0.0.4/30 [1/0] via 172.16.21.1
+S       10.1.0.0/23 [1/0] via 172.16.21.1
+S       10.2.1.0/24 [1/0] via 172.16.21.1
+C       10.2.2.0/24 is directly connected, GigabitEthernet0/0
+L       10.2.2.1/32 is directly connected, GigabitEthernet0/0
+     172.16.0.0/16 is variably subnetted, 4 subnets, 3 masks
+S       172.16.0.0/23 [1/0] via 172.16.21.1
+S       172.16.20.0/24 [1/0] via 172.16.21.1
+C       172.16.21.0/24 is directly connected, GigabitEthernet0/1
+L       172.16.21.2/32 is directly connected, GigabitEthernet0/1
+
+R7> en 
+R7# show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     10.0.0.0/8 is variably subnetted, 5 subnets, 4 masks
+S       10.0.0.0/29 [1/0] via 172.16.20.1
+S       10.1.0.0/23 [1/0] via 172.16.20.1
+C       10.2.1.0/24 is directly connected, GigabitEthernet0/0
+L       10.2.1.1/32 is directly connected, GigabitEthernet0/0
+S       10.2.2.0/24 [1/0] via 172.16.20.1
+     172.16.0.0/16 is variably subnetted, 4 subnets, 3 masks
+S       172.16.0.0/23 [1/0] via 172.16.20.1
+C       172.16.20.0/24 is directly connected, GigabitEthernet0/1
+L       172.16.20.2/32 is directly connected, GigabitEthernet0/1
+S       172.16.21.0/24 [1/0] via 172.16.20.1
