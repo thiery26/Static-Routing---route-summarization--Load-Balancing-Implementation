@@ -1,0 +1,34 @@
+📍 LOCATION 1: Gateway Router (Most Important!)
+What to Summarize:
+
+Combine Douala (10.1.1.0/24) + Yaounde (10.1.2.0/24) = 10.1.0.0/23
+Combine Garoua (10.2.1.0/24) + Maroua (10.2.2.0/24) = 10.2.0.0/2
+
+! ========================================
+! GATEWAY ROUTER - ROUTE SUMMARIZATION
+! ========================================
+
+enable
+configure terminal
+
+! STEP 1: Remove old specific routes
+no ip route 10.1.1.0 255.255.255.0 10.0.0.2
+no ip route 10.1.2.0 255.255.255.0 10.0.0.2
+no ip route 10.2.1.0 255.255.255.0 10.0.0.6
+no ip route 10.2.2.0 255.255.255.0 10.0.0.6
+
+! STEP 2: Add summary routes
+! Summary for R1's LANs (10.1.1.0/24 + 10.1.2.0/24)
+ip route 10.1.0.0 255.255.254.0 10.0.0.2
+
+! Summary for R2's LANs (10.2.1.0/24 + 10.2.2.0/24)
+ip route 10.2.0.0 255.255.254.0 10.0.0.6
+
+! STEP 3: Keep distribution network routes (optional)
+ip route 172.16.10.0 255.255.255.0 10.0.0.2
+ip route 172.16.11.0 255.255.255.0 10.0.0.2
+ip route 172.16.20.0 255.255.255.0 10.0.0.6
+ip route 172.16.21.0 255.255.255.0 10.0.0.6
+
+end
+write memory
